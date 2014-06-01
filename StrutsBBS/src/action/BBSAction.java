@@ -33,9 +33,9 @@ public class BBSAction extends Action {
 
         try {
             // ìoò^
-            if (form.getName() != null && !"".equals(form.getName())) {
+//            if (form.getName() != null && !"".equals(form.getName())) {
                 articleDao.create(new Article(null, form.getName(), form.getMessage()));
-            }
+//            }
 
             // ëSåèéÊìæ
             List<Article> articleList = articleDao.getAll();
