@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+    <form-beans>
+        <form-bean name="bbsForm" type="action.form.BBSForm" />
+    </form-beans>
+
+    <action-mappings>
+        <action name="bbsForm" path="/bbs" type="action.BBSAction" scope="request"
+            validate="true" input="/bbs.jsp">
+            <forward name="list" path="/bbs.jsp" />
+        </action>
+    </action-mappings>
+
+
+    <message-resources parameter="MessageResources" />
+
+</struts-config>
+          
